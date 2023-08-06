@@ -1,0 +1,39 @@
+{
+  "timeZone": "Africa/Casablanca",
+  "dependencies": {
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "GDApp",
+      "logoUrl": "https://www.pngfind.com/pngs/m/54-545104_search-icon-png-format-search-engine-optimization-icon.png",
+      "openLinkUrlPrefixes": [
+        "https://www.google.com"
+      ],
+      "universalActions": [
+        {
+          "label": "Add Your Sheet",
+          "runFunction": "Add"
+        }
+      ]
+    },
+    "gmail": {
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "onGmailMessage"
+        }
+      ],
+      "composeTrigger": {
+        "selectActions": [
+          {
+            "text": "Insert",
+            "runFunction": "onGmailCompose"
+          }
+        ],
+        "draftAccess": "NONE"
+      }
+    }
+  }
+}
